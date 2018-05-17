@@ -95,12 +95,12 @@ public class FirstTry2 extends Application {
 	    btCancel.setOnAction(e -> window.setScene(scene2));
 	    Button btPurchase = new Button("Purchase");
 	    Button btDisplay = new Button("Display");
-	    btDisplay.setOnAction(e -> window.setScene(scene3));
+	    //btDisplay.setOnAction(e -> window.setScene(scene3));
 	    Scene scene1 = new Scene(gridPane, 600, 300);
 	    Button btProceed = new Button("Proceed");
 	    btProceed.setOnAction(e -> window.setScene(scene1));
 	    Button btAdd = new Button("Add");
-	    btAdd.setOnAction(e -> window.setScene(scene4));
+	    //btAdd.setOnAction(e -> window.setScene(scene4));
 	    Group root = new Group();
 	    
 	    GridPane layout = new GridPane();
@@ -153,8 +153,8 @@ public class FirstTry2 extends Application {
 	  
 	   
 	   
-	   TextField tfNumberOfYears = new TextField();
-	   TextField tfLoanAmount = new TextField();
+	   TextField tfTotalPrice = new TextField();
+	   TextField tfQuantity = new TextField();
 	   TextField tfSeat = new TextField();
 	   final ToggleGroup group1 = new ToggleGroup();
 	   final ToggleGroup group2 = new ToggleGroup();
@@ -203,9 +203,9 @@ public class FirstTry2 extends Application {
     gridPane.add(new Label("Ticket Type :"), 0, 7);
     gridPane.add(box2,1,7);
     gridPane.add(new Label("Quantity:"), 0, 8);
-    gridPane.add(tfLoanAmount, 1, 8);
+    gridPane.add(tfQuantity, 1, 8);
     gridPane.add(new Label("Total Price:"), 0, 9);
-    gridPane.add(tfTotalPayment, 1, 9);
+    gridPane.add(tfTotalPrice, 1, 9);
     gridPane.add(btCancel, 2, 10);
     gridPane.add(btAdd, 1, 10);
     gridPane.add(btPurchase, 0, 10);
@@ -215,21 +215,23 @@ public class FirstTry2 extends Application {
     // Set properties for UI
     gridPane.setAlignment(Pos.CENTER);
     //choiceBox.setAlignment(Pos.BOTTOM_RIGHT);
-    tfNumberOfYears.setAlignment(Pos.BOTTOM_RIGHT);
-    tfLoanAmount.setAlignment(Pos.BOTTOM_RIGHT);
+    //tfNumberOfYears.setAlignment(Pos.BOTTOM_RIGHT);
+    tfQuantity.setAlignment(Pos.BOTTOM_RIGHT);
     //tfMonthlyPayment.setAlignment(Pos.BOTTOM_RIGHT);
-    tfTotalPayment.setAlignment(Pos.BOTTOM_RIGHT);
+    tfTotalPrice.setAlignment(Pos.BOTTOM_RIGHT);
 //    text2.setAlignment(Pos.BOTTOM_RIGHT);
     
-    tfLoanAmount.setEditable(false);
-    tfTotalPayment.setEditable(false);
+    tfQuantity.setEditable(false);
+    tfTotalPrice.setEditable(false);
+    tfTotalPrice.setDisable(true);
+    tfQuantity.setDisable(true);
    // GridPane.setHalignment(btCancel, HPos.RIGHT);
     GridPane.setHalignment(btPurchase, HPos.RIGHT);
 //    GridPane.setHalignment(text2, HPos.CENTER);
 //    btPurchase.setOnAction(e -> handleOptions(rb1,rb2));  
 //    
 //  }
-//	private void handleOptions(ChoiceBox choiceBox1, ChoiceBox choiceBox2){
+//	private void handleOptions(ChoiceBox choiceBox1){
 //        String message = "Users order:\n";
 //
 //        if(choiceBox1.isSelected())
@@ -237,9 +239,11 @@ public class FirstTry2 extends Application {
 //
 //        if(choiceBox2.isSelected())
 //            message += "Tuna\n";
-//
-//        System.out.println(message);
-//    choiceBox2.getSelectionModel().selectedItemProperty().addListener((v.oldValue,newValue)->System.out.println(newValue));
+
+       // System.out.println(message);
+    choiceBox1.getSelectionModel().selectedItemProperty().addListener((v,oldValue,newValue)->System.out.println(newValue));
+    choiceBox2.getSelectionModel().selectedItemProperty().addListener((v,oldValue,newValue)->System.out.println(newValue));
+    choiceBox3.getSelectionModel().selectedItemProperty().addListener((v,oldValue,newValue)->System.out.println(newValue));
 //}
 	}
 	private void getChoice(ChoiceBox<String> choiceBox1){
