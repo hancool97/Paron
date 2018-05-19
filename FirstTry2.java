@@ -5,18 +5,13 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import java.io.FileInputStream; 
 import java.io.FileNotFoundException; 
-import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
-import javafx.geometry.Insets;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Background;
@@ -28,7 +23,6 @@ import javafx.stage.*;
 import javafx.scene.*;
 import javafx.scene.layout.*;
 import javafx.scene.control.*;
-import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.geometry.VPos;
@@ -37,12 +31,11 @@ import java.lang.Object;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.Node;
-import    javafx.scene.Parent;
-import        javafx.scene.layout.Region;
-      import      javafx.scene.control.Control;
-            import    javafx.scene.control.Labeled;
-                  import  javafx.scene.control.ButtonBase;
-import javafx.scene.control.Button;
+import javafx.scene.Parent;
+import javafx.scene.layout.Region;
+import javafx.scene.control.Control;
+import javafx.scene.control.Labeled;
+import javafx.scene.control.ButtonBase;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -59,7 +52,6 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
-//import javafx.scene.text.TextAlignment;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -126,7 +118,7 @@ public class FirstTry2 extends Application {
 	    layout.setBackground(new Background(new BackgroundImage(image,BackgroundRepeat.REPEAT,
 	               BackgroundRepeat.NO_REPEAT,
 	               BackgroundPosition.DEFAULT,
-	                new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, false))));
+	               new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, false, false, true, false))));
 	    layout.setAlignment(Pos.CENTER);
 	    root.getChildren().add(layout);
 	    
@@ -181,7 +173,7 @@ public class FirstTry2 extends Application {
 	   Text text2 = new Text();
 	   text2.setFont(new Font(20));
 	   text2.setText("ORDER TICKET");
-	   TextField tfTotalPayment = new TextField();
+	   //TextField tfTotalPayment = new TextField();
 	   
 	    
     
@@ -246,32 +238,32 @@ public class FirstTry2 extends Application {
     choiceBox3.getSelectionModel().selectedItemProperty().addListener((v,oldValue,newValue)->System.out.println(newValue));
 //}
 	}
-	private void getChoice(ChoiceBox<String> choiceBox1){
-        String movie = choiceBox1.getValue();
-        String movie2 = choiceBox1.getValue();
-        System.out.println(movie);
-}
-  
-  private void calculateLoanPayment() {
-    // Get values from text fields
-    System.out.println("Noobs");
-
-    // Create a loan object. Loan defined in Listing 10.2
-  
-
-    // Display monthly payment and total payment
-  
-  }
-  private void Display() {
-	    // Get values from text fields
-	  System.out.println("Blah la wei");
-
-	    // Create a loan object. Loan defined in Listing 10.2
-	  
-
-	    // Display monthly payment and total payment
-	  
-	  }
+//	private void getChoice(ChoiceBox<String> choiceBox1){
+//        String movie = choiceBox1.getValue();
+//        String movie2 = choiceBox1.getValue();
+//        System.out.println(movie);
+//}
+//  
+//  private void calculateLoanPayment() {
+//    // Get values from text fields
+//    System.out.println("Noobs");
+//
+//    // Create a loan object. Loan defined in Listing 10.2
+//  
+//
+//    // Display monthly payment and total payment
+//  
+//  }
+//  private void Display() {
+//	    // Get values from text fields
+//	  System.out.println("Blah la wei");
+//
+//	    // Create a loan object. Loan defined in Listing 10.2
+//	  
+//
+//	    // Display monthly payment and total payment
+//	  
+//	  }
 	
   
   /**
